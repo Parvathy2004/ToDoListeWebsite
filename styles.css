@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: calc(100% - 50px); /* Adjust width to account for left and right margins */
+    min-height: calc(100vh - 50px); /* Adjust height to account for top and bottom margins */
+    padding: 10px;
+    background: url("cuteBG.jpg");
+    border-radius: 10px;
+    margin: 25px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Hide overflow content to prevent scrollbars */
+}
+
+
+
+.todo-app{
+    
+    background-color: wheat;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    display: flex;
+    justify-content: center;
+    font-family: "Playwrite GB S", cursive;
+    font-size: 50px;
+    font-style: italic;
+    color: midnightblue;
+}
+
+.todo-app h2 img{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 12%;
+    height: 12%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:antiquewhite;
+    border-radius: 30px;
+    padding-left: 10px;
+    margin: 10px;
+}
+
+#input-box{
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+}
+
+button{
+    background: lightpink;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-family: "Playwrite GB S", cursive;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px; 
+}
+
+ul li.checked{
+    color:  #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(cheched.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+.animated-text{
+    cursor: pointer;
+}
+
+.animated-text:hover{
+    zoom: 1.1;
+}
